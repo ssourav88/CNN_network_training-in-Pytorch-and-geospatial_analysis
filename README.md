@@ -66,12 +66,12 @@ Supports:
 - Random sample prediction comparison
 
 # 📦 Dependencies
-xarray
-cfgrib
-cartopy
-matplotlib
-pandas
-numpy
+xarray,
+cfgrib,
+cartopy,
+matplotlib,
+pandas,
+numpy,
 torch
 
 # 🔍 Goals & Applications

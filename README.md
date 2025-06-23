@@ -1,5 +1,5 @@
 # About the project
-This script utilizes a Convolutional Neural Network (CNN) implemented with the PyTorch library in Python to train and validate a model for predicting next-day concentrations of particulate matter (PM2.5 µm). It also includes spatio-temporal visualizations to illustrate the distribution of PM2.5 across both space and time. 
+This script utilizes a Feedforward Neural Network (FNN) Convolutional Neural Network (CNN) implemented with the PyTorch library in Python to train and validate a model for predicting next-day concentrations of particulate matter (PM2.5 µm). It also includes spatio-temporal visualizations to illustrate the distribution of PM2.5 across both space and time. 
 # 📂 Project Overview
 📡 Data Source: Satellite-based particulate matter data (particulate_matter_2.5um.grib)
 

@@ -61,7 +61,6 @@ Optimized using MSELoss and Adam optimizer
 
 # 🧪 Training Results
 Training Feedforward NN...
-
 Epoch  1 | Train Loss: 0.0049 | Val Loss: 0.0011  
 Epoch  2 | Train Loss: 0.0023 | Val Loss: 0.0010  
 Epoch  3 | Train Loss: 0.0020 | Val Loss: 0.0008  
@@ -82,9 +81,30 @@ Epoch 17 | Train Loss: 0.0011 | Val Loss: 0.0007
 Epoch 18 | Train Loss: 0.0011 | Val Loss: 0.0008  
 Epoch 19 | Train Loss: 0.0011 | Val Loss: 0.0007  
 Epoch 20 | Train Loss: 0.0011 | Val Loss: 0.0010  
+Final R² Score: 0.9957
 
-Feedforward NN R²: 0.9957
-
+Training Convoluted NN...
+Epoch  1 | Train Loss: 0.3855 | Val Loss: 0.0163  
+Epoch  2 | Train Loss: 0.0158 | Val Loss: 0.0081  
+Epoch  3 | Train Loss: 0.0094 | Val Loss: 0.0064  
+Epoch  4 | Train Loss: 0.0080 | Val Loss: 0.0058  
+Epoch  5 | Train Loss: 0.0068 | Val Loss: 0.0050  
+Epoch  6 | Train Loss: 0.0064 | Val Loss: 0.0047  
+Epoch  7 | Train Loss: 0.0062 | Val Loss: 0.0043  
+Epoch  8 | Train Loss: 0.0056 | Val Loss: 0.0040  
+Epoch  9 | Train Loss: 0.0058 | Val Loss: 0.0036  
+Epoch 10 | Train Loss: 0.0052 | Val Loss: 0.0039  
+Epoch 11 | Train Loss: 0.0051 | Val Loss: 0.0035  
+Epoch 12 | Train Loss: 0.0047 | Val Loss: 0.0032  
+Epoch 13 | Train Loss: 0.0045 | Val Loss: 0.0032  
+Epoch 14 | Train Loss: 0.0045 | Val Loss: 0.0036  
+Epoch 15 | Train Loss: 0.0046 | Val Loss: 0.0037  
+Epoch 16 | Train Loss: 0.0043 | Val Loss: 0.0048  
+Epoch 17 | Train Loss: 0.0041 | Val Loss: 0.0029  
+Epoch 18 | Train Loss: 0.0040 | Val Loss: 0.0029  
+Epoch 19 | Train Loss: 0.0038 | Val Loss: 0.0029  
+Epoch 20 | Train Loss: 0.0036 | Val Loss: 0.0030  
+Final R² Score: 0.9875
 
 Model learns spatiotemporal patterns well after log-scaling the data
 

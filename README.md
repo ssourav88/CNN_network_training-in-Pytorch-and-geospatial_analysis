@@ -5,7 +5,7 @@ This script utilizes a Feedforward Neural Network (FNN) Convolutional Neural Net
 
 🧹 Preprocessing: Extracts, filters, and applies a log transformation on PM2.5 concentration
 
-🧠 Modeling: A CNN is trained to forecast next-timestep PM2.5 concentration based on current observations
+🧠 Modeling: A FNN and CNN model is trained to predict the PM2.5 concentration based on current observations and later used to forecast the next 24 hour PM2.5 concentration.
 
 📊 Evaluation: Predicted vs actual comparison on random validation samples
 
@@ -21,22 +21,37 @@ Output target: PM2.5 concentration at time t+1 for each spatial grid
 
 # 🧠 Model Architecture
 ```python
-class PM25PredictorCNN(nn.Module):
-    def __init__(self):
+# 1) Feedforward NN (flatten input)
+class FeedForwardNN(nn.Module):
+    def __init__(self, input_dim):
         super().__init__()
-        self.conv1 = nn.Conv2d(1, 16, kernel_size=3, padding=1)
-        self.conv2 = nn.Conv2d(16, 32, kernel_size=3, padding=1)
-        self.conv3 = nn.Conv2d(32, 16, kernel_size=3, padding=1)
-        self.conv4 = nn.Conv2d(16, 1, kernel_size=3, padding=1)
+        self.net = nn.Sequential(
+            nn.Linear(input_dim, 64),
+            nn.ReLU(),
+            nn.Linear(64, 32),
+            nn.ReLU(),
+            nn.Linear(32, 1)
+        )
+    def forward(self, x):
+        return self.net(x)
+
+# 2) Pure CNN Model
+class PureCNN(nn.Module):
+    def __init__(self, input_features):
+        super().__init__()
+        self.conv1 = nn.Conv1d(in_channels=input_features, out_channels=32, kernel_size=3, padding=1)
+        self.relu = nn.ReLU()
+        self.conv2 = nn.Conv1d(32, 16, 3, padding=1)
+        self.conv_out = nn.Conv1d(16, 1, kernel_size=1)  # Predict single value per seq position
 
     def forward(self, x):
-        x = F.relu(self.conv1(x))  # shape: [B, 16, 34, 61]
-        x = F.relu(self.conv2(x))  # shape: [B, 32, 34, 61]
-        x = F.relu(self.conv3(x))  # shape: [B, 16, 34, 61]
-        x = self.conv4(x)          # shape: [B, 1, 34, 61]
+        # x: (batch, seq_len, features)
+        x = x.permute(0, 2, 1)        # -> (batch, features, seq_len)
+        x = self.relu(self.conv1(x)) # -> (batch, 32, seq_len)
+        x = self.relu(self.conv2(x)) # -> (batch, 16, seq_len)
+        x = self.conv_out(x)         # -> (batch, 1, seq_len)
+        x = x.squeeze(1)             # -> (batch, seq_len)
         return x
-
-model = PM25PredictorCNN()
 ```
 Fully convolutional model with 4 layers
 

@@ -127,7 +127,8 @@ cartopy,
 matplotlib,
 pandas,
 numpy,
-torch
+torch,
+sklearn
 
 # 🔍 Goals & Applications
 - Build early-warning systems for air quality

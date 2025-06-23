@@ -61,6 +61,7 @@ Optimized using MSELoss and Adam optimizer
 
 # 🧪 Training Results
 Training Feedforward NN...
+
 Epoch  1 | Train Loss: 0.0049 | Val Loss: 0.0011  
 Epoch  2 | Train Loss: 0.0023 | Val Loss: 0.0010  
 Epoch  3 | Train Loss: 0.0020 | Val Loss: 0.0008  
@@ -84,6 +85,7 @@ Epoch 20 | Train Loss: 0.0011 | Val Loss: 0.0010
 Final R² Score: 0.9957
 
 Training Convoluted NN...
+
 Epoch  1 | Train Loss: 0.3855 | Val Loss: 0.0163  
 Epoch  2 | Train Loss: 0.0158 | Val Loss: 0.0081  
 Epoch  3 | Train Loss: 0.0094 | Val Loss: 0.0064  

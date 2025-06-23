@@ -60,12 +60,28 @@ Accepts (1, 34, 61) spatial input grids and outputs same shape
 Optimized using MSELoss and Adam optimizer
 
 # 🧪 Training Results
-| Epoch | Train Loss | Validation Loss |
-|-------|------------|-----------------|
-| 1     | 13.9810    | 0.0716          |
-| 2     | 0.0399     | 0.0246          |
-| 3     | 0.0176     | 0.0120          |
-| 10    | 0.0008     | 0.0007          |
+Training Feedforward NN...
+Epoch 1 | Train Loss: 0.0049 | Val Loss: 0.0011 |
+Epoch 2 | Train Loss: 0.0023 | Val Loss: 0.0010 |
+Epoch 3 | Train Loss: 0.0020 | Val Loss: 0.0008 |
+Epoch 4 | Train Loss: 0.0017 | Val Loss: 0.0008 |
+Epoch 5 | Train Loss: 0.0015 | Val Loss: 0.0008 |
+Epoch 6 | Train Loss: 0.0014 | Val Loss: 0.0008 |
+Epoch 7 | Train Loss: 0.0014 | Val Loss: 0.0009 |
+Epoch 8 | Train Loss: 0.0013 | Val Loss: 0.0007 |
+Epoch 9 | Train Loss: 0.0013 | Val Loss: 0.0008 |
+Epoch 10 | Train Loss: 0.0013 | Val Loss: 0.0009 |
+Epoch 11 | Train Loss: 0.0012 | Val Loss: 0.0008 |
+Epoch 12 | Train Loss: 0.0012 | Val Loss: 0.0008 |
+Epoch 13 | Train Loss: 0.0012 | Val Loss: 0.0013 |
+Epoch 14 | Train Loss: 0.0012 | Val Loss: 0.0007 |
+Epoch 15 | Train Loss: 0.0011 | Val Loss: 0.0008 |
+Epoch 16 | Train Loss: 0.0011 | Val Loss: 0.0007 |
+Epoch 17 | Train Loss: 0.0011 | Val Loss: 0.0007 |
+Epoch 18 | Train Loss: 0.0011 | Val Loss: 0.0008 |
+Epoch 19 | Train Loss: 0.0011 | Val Loss: 0.0007 |
+Epoch 20 | Train Loss: 0.0011 | Val Loss: 0.0010 |
+Feedforward NN R2: 0.9957
 
 
 Model learns spatiotemporal patterns well after log-scaling the data
